@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi's Legacy Timeline</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Cinzel cho Tiêu đề (Sang trọng, sử thi) và Poppins cho văn bản (Dễ đọc) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Khu vực Banner chính -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch-text">LIONEL MESSI</h1>
+            <p>The magnificent journey of the greatest player in football history</p>
+             <!-- Hành trình vĩ đại của cầu thủ xuất sắc nhất lịch sử bóng đá -->
+            <a href="#locker-room" class="btn-explore">Explore Now</a>
+             <!-- Khám phá ngay -->
+        </div>
+    </header> 
+
+    <!-- Khu vực Tủ đồ áo đấu cuộn ngang -->
+    <section id="locker-room" class="locker-section">
+        <h2 class="section-title">Career Locker Room</h2> 
+        <!-- Tủ đồ sjw nghiệp -->
+        
+        <div class="carousel-wrapper">
+            <div class="cards-track">
+                
+                <div class="jersey-card">
+                    <div class="card-front">
+                        <img src="new old boy.png" alt="Messi Newell's Old Boys">
+                        <h3>Newell's Old Boys</h3>
+                        <p>The Beginning</p>
+                    </div>
+                </div>
+
+                <div class="jersey-card">
+                    <div class="card-front">
+                        <img src="barca.png" alt="Messi Barca">
+                        <h3>Barcelona</h3>
+                        <p>The Golden Era</p>
+                    </div>
+                </div>
+
+                <div class="jersey-card">
+                    <div class="card-front">
+                        <img src="psg.png" alt="Messi PSG">
+                        <h3>Paris Saint-Germain</h3>
+                        <p>The Legendary No. 30</p>
+                    </div>
+                </div>
+
+                <div class="jersey-card">
+                    <div class="card-front">
+                        <img src="miami.png" alt="Messi Miami">
+                        <h3>Inter Miami</h3>
+                        <p>The Final Chapter</p>
+                    </div>
+                </div>
+
+                <div class="jersey-card">
+                    <div class="card-front">
+                        <img src="argentina.webp" alt="Messi Argentina">
+                        <h3>ĐTQG Argentina</h3>
+                        <p>2022 World Cup Champion</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Khu vực Dòng thời gian sự nghiệp -->
+    <section class="timeline-section">
+        <h2 class="section-title" style="text-align: center;">The Legacy Timeline</h2>
+        <div class="timeline">
+            
+            <div class="timeline-container left-container">
+                <div class="timeline-box">
+                    <h2>2004</h2>
+                    <h3>Barcelona First Team Debut</h3>
+                    <!-- ra mắt đội 1 barca -->
+                    <p>Messi made his official La Liga debut, marking the beginning of a football genius's era under Frank Rijkaard.</p>
+                    <!-- Messi chính thức ra sân tại La Liga, bắt đầu kỷ nguyên của một thiên tài bóng đá dưới thời Frank Rijkaard -->
+                </div>
+            </div>
+
+            <div class="timeline-container right-container">
+                <div class="timeline-box">
+                    <h2>2009</h2>
+                    <h3>First Ballon d'Or</h3>
+                    <p>Won the historic sextuple with Pep Guardiola and claimed his first Ballon d'Or at the age of 22.</p>
+                    <!-- Giành cú ăn 6 lịch sử cùng Pep Guardiola và nhận Quả Bóng Vàng đầu tiên ở tuổi 22. -->
+                </div>
+            </div>
+
+            <div class="timeline-container left-container">
+                <div class="timeline-box">
+                    <h2>2012</h2>
+                    <h3>Unprecedented Record</h3>
+                    <!-- Kỷ lục vô tiền khoáng hậu -->
+                    <p>Scored 91 goals in a single calendar year, shattering Gerd Müller's seemingly unbreakable record.</p>
+                    <!-- Ghi 91 bàn thắng trong một năm dương lịch, xô đổ kỷ lục tưởng chừng không thể phá vỡ của Gerd Müller -->
+                </div>
+            </div>
+
+            <div class="timeline-container right-container">
+                <div class="timeline-box">
+                    <h2>2021</h2>
+                    <h3>Copa America Glory</h3>
+                    <p>Ended the title drought with the national team, defeating Brazil right at the Maracana sanctuary.</p>
+                    <!-- Giải cơn khát danh hiệu cùng đội tuyển quốc gia, đánh bại Brazil ngay tại thánh địa Maracana. -->
+                </div>
+            </div>
+
+            <div class="timeline-container left-container">
+                <div class="timeline-box">
+                    <h2>2022</h2>
+                    <h3>King of the World Cup</h3>
+                    <p>Scored a brace in the historic final, lifting Argentina to the top of the world and completing the greatest collection of all time.</p>
+                    <!-- Cú đúp trong trận chung kết lịch sử, đưa Argentina lên đỉnh thế giới và hoàn tất bộ sưu tập vĩ đại nhất. -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Script xử lý Scroll Reveal cho Timeline -->
+    <script>
+        // Tạo một "người quan sát" (Observer)
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Khi phần tử lọt vào tầm nhìn của màn hình
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show'); // Gắn class show để bay vào
+                } 
+                /* Bỏ comment 3 dòng dưới nếu bạn muốn cuộn qua rồi cuộn lại nó vẫn bay vào tiếp */
+                // else {
+                //     entry.target.classList.remove('show'); 
+                // }
+            });
+        }, {
+            threshold: 0.3 // Kích hoạt khi 30% hộp thời gian đã xuất hiện trên màn hình
+        });
+
+        // Tìm tất cả các container của timeline và bắt đầu quan sát
+        const timelines = document.querySelectorAll('.timeline-container');
+        timelines.forEach(timeline => {
+            timelineObserver.observe(timeline);
+        });
+    </script>
+</body>
+</html>
