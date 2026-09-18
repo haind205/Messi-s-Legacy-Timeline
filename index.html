@@ -5,30 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messi's Legacy Timeline</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Cinzel cho Tiêu đề (Sang trọng, sử thi) và Poppins cho văn bản (Dễ đọc) -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Khu vực Banner chính -->
-    <header class="hero-section">
+    <!-- Nút Menu -->
+    <div class="menu-btn" id="menu-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <!-- Thanh Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#locker-room">Career Locker Room</a></li>
+            <li><a href="#timeline">The Legacy Timeline</a></li>
+            <li><a href="#moments">Iconic Moments</a></li>
+            <li><a href="#trophy-room">Sanctuary of Glory</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner chính -->
+    <header class="hero-section" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="glitch-text">LIONEL MESSI</h1>
             <p>The magnificent journey of the greatest player in football history</p>
-             <!-- Hành trình vĩ đại của cầu thủ xuất sắc nhất lịch sử bóng đá -->
             <a href="#locker-room" class="btn-explore">Explore Now</a>
-             <!-- Khám phá ngay -->
         </div>
     </header> 
 
-    <!-- Khu vực Tủ đồ áo đấu cuộn ngang -->
+    <!-- Bộ đếm thành tích -->
+    <section class="stats-counter" id="stats">
+        <div class="stat-item">
+            <h3 class="counter" data-target="8">0</h3>
+            <p>Ballon d'Or</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="49">0</h3>
+            <p>Trophies</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="929">0</h3>
+            <p>Career Goals</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="424">0</h3>
+            <p>Total Assists</p>
+        </div>
+    </section>
+
+    <!-- Tủ đồ -->
     <section id="locker-room" class="locker-section">
         <h2 class="section-title">Career Locker Room</h2> 
-        <!-- Tủ đồ sjw nghiệp -->
-        
         <div class="carousel-wrapper">
             <div class="cards-track">
-                
                 <div class="jersey-card">
                     <div class="card-front">
                         <img src="new old boy.png" alt="Messi Newell's Old Boys">
@@ -36,7 +68,6 @@
                         <p>The Beginning</p>
                     </div>
                 </div>
-
                 <div class="jersey-card">
                     <div class="card-front">
                         <img src="barca.png" alt="Messi Barca">
@@ -44,7 +75,6 @@
                         <p>The Golden Era</p>
                     </div>
                 </div>
-
                 <div class="jersey-card">
                     <div class="card-front">
                         <img src="psg.png" alt="Messi PSG">
@@ -52,7 +82,6 @@
                         <p>The Legendary No. 30</p>
                     </div>
                 </div>
-
                 <div class="jersey-card">
                     <div class="card-front">
                         <img src="miami.png" alt="Messi Miami">
@@ -60,95 +89,320 @@
                         <p>The Final Chapter</p>
                     </div>
                 </div>
-
                 <div class="jersey-card">
                     <div class="card-front">
                         <img src="argentina.webp" alt="Messi Argentina">
-                        <h3>ĐTQG Argentina</h3>
+                        <h3>Argentina</h3>
                         <p>2022 World Cup Champion</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Khu vực Dòng thời gian sự nghiệp -->
-    <section class="timeline-section">
+    <!-- Timeline -->
+    <section class="timeline-section" id="timeline">
         <h2 class="section-title" style="text-align: center;">The Legacy Timeline</h2>
         <div class="timeline">
-            
             <div class="timeline-container left-container">
                 <div class="timeline-box">
                     <h2>2004</h2>
                     <h3>Barcelona First Team Debut</h3>
-                    <!-- ra mắt đội 1 barca -->
                     <p>Messi made his official La Liga debut, marking the beginning of a football genius's era under Frank Rijkaard.</p>
-                    <!-- Messi chính thức ra sân tại La Liga, bắt đầu kỷ nguyên của một thiên tài bóng đá dưới thời Frank Rijkaard -->
                 </div>
             </div>
-
             <div class="timeline-container right-container">
                 <div class="timeline-box">
                     <h2>2009</h2>
                     <h3>First Ballon d'Or</h3>
                     <p>Won the historic sextuple with Pep Guardiola and claimed his first Ballon d'Or at the age of 22.</p>
-                    <!-- Giành cú ăn 6 lịch sử cùng Pep Guardiola và nhận Quả Bóng Vàng đầu tiên ở tuổi 22. -->
                 </div>
             </div>
-
             <div class="timeline-container left-container">
                 <div class="timeline-box">
                     <h2>2012</h2>
                     <h3>Unprecedented Record</h3>
-                    <!-- Kỷ lục vô tiền khoáng hậu -->
                     <p>Scored 91 goals in a single calendar year, shattering Gerd Müller's seemingly unbreakable record.</p>
-                    <!-- Ghi 91 bàn thắng trong một năm dương lịch, xô đổ kỷ lục tưởng chừng không thể phá vỡ của Gerd Müller -->
                 </div>
             </div>
-
             <div class="timeline-container right-container">
                 <div class="timeline-box">
                     <h2>2021</h2>
                     <h3>Copa America Glory</h3>
                     <p>Ended the title drought with the national team, defeating Brazil right at the Maracana sanctuary.</p>
-                    <!-- Giải cơn khát danh hiệu cùng đội tuyển quốc gia, đánh bại Brazil ngay tại thánh địa Maracana. -->
                 </div>
             </div>
-
             <div class="timeline-container left-container">
                 <div class="timeline-box">
                     <h2>2022</h2>
                     <h3>King of the World Cup</h3>
                     <p>Scored a brace in the historic final, lifting Argentina to the top of the world and completing the greatest collection of all time.</p>
-                    <!-- Cú đúp trong trận chung kết lịch sử, đưa Argentina lên đỉnh thế giới và hoàn tất bộ sưu tập vĩ đại nhất. -->
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- Script xử lý Scroll Reveal cho Timeline -->
+
+    <!-- Khoảnh khắc biểu tượng -->
+    <section class="moments-section" id="moments">
+        <h2 class="section-title" style="text-align: center;">Iconic Moments</h2>
+        <p class="section-subtitle" style="text-align: center; color: #94a3b8; margin-bottom: 40px; font-family: 'Poppins', sans-serif;">Click on each masterpiece to witness the legend</p>
+        
+        <div class="moments-grid">
+            <div class="moment-card" data-video="ankara.mp4" data-title="Ankara Messi (2007)" data-desc="A mesmerizing 60-meter solo run past five Getafe defenders, mirroring Maradona's Goal of the Century.">
+                <div class="moment-img-wrapper">
+                    <img src="lionel-messis-iconic-ankara-messi-goal-he-scored-this-when-v0-NGhma2dlMGV3c3hkMZsYha80LWLGLE6eTGIS9K6aRrvn-ZMvL4-6W7mNEHWX.webp" alt="Ankara Messi">
+                    <div class="play-overlay"><div class="play-btn"></div></div>
+                </div>
+                <h3>The 60-Meter Solo</h3>
+            </div>
+            <div class="moment-card" data-video="boateng.mp4" data-title="Defying Gravity (2015)" data-desc="A devastating feint that left Jerome Boateng on the ground, followed by a delicate chip over Manuel Neuer.">
+                <div class="moment-img-wrapper">
+                    <img src="boateng.webp" alt="Boateng Drop">
+                    <div class="play-overlay"><div class="play-btn"></div></div>
+                </div>
+                <h3>The Magic Trick</h3>
+            </div>
+            <div class="moment-card" data-video="real.mp4" data-title="Remember The Name (2017)" data-desc="A 92nd-minute winner in the heart of the Bernabéu. Removing his shirt and holding it up to the silenced Madrid crowd.">
+                <div class="moment-img-wrapper">
+                    <img src="messi.jpg" alt="Bernabeu Celebration">
+                    <div class="play-overlay"><div class="play-btn"></div></div>
+                </div>
+                <h3>The Bernabéu Silence</h3>
+            </div>
+            <div class="moment-card" data-video="copa.mp4" data-title="Tears of Glory (2021)" data-desc="Falling to his knees in tears as the final whistle blew. The agonizing wait for international glory finally ended at the Maracanã.">
+                <div class="moment-img-wrapper">
+                    <img src="copa.jpg" alt="Copa America 2021">
+                    <div class="play-overlay"><div class="play-btn"></div></div>
+                </div>
+                <h3>Conquering the Maracanã</h3>
+            </div>
+            <div class="moment-card" data-video="wc.mp4" data-title="Champion of the World (2022)" data-desc="Lifting the holy grail in Qatar after the greatest final ever played. Football was finally completed.">
+                <div class="moment-img-wrapper">
+                    <img src="images.jpg" alt="World Cup 2022">
+                    <div class="play-overlay"><div class="play-btn"></div></div>
+                </div>
+                <h3>The Ultimate Crown</h3>
+            </div>
+        </div>
+    </section>
+
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div class="iframe-container">
+                <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="modal-text">
+                <h2 id="modalTitle">Title</h2>
+                <p id="modalDesc">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tủ Danh Hiệu Tương Tác (Ảnh mới image.jpeg với đủ 13 cúp) -->
+    <section class="trophy-room-section" id="trophy-room">
+        <h2 class="section-title" style="text-align: center;">The Sanctuary of Glory</h2>
+        <p class="section-subtitle" style="text-align: center; color: #94a3b8; margin-bottom: 40px; font-family: 'Poppins', sans-serif;">Click on the trophies in the room to view details of each title.</p>
+        <!-- Nhấp vào các chiếc cúp trong phòng để xem chi tiết từng danh hiệu. -->
+     
+        <div class="room-container">
+            <img src="image.jpeg" alt="Messi with all trophies" class="room-img">
+
+            <!-- 1. World Cup -->
+            <div class="hotspot" style="top: 35%; left: 4%; width: 6%; height: 30%;" 
+                 data-title="FIFA World Cup (2022)" data-img="wctrophy.jpg" data-desc="The greatest championship of his career—Qatar 2022. The final piece that elevated Lionel Messi to the pantheon of eternal legends.">
+                <!-- Chức vô địch vĩ đại nhất sự nghiệp tại Qatar 2022. Mảnh ghép cuối cùng đưa Lionel Messi bước vào ngôi đền huyền thoại vĩnh cửu. -->
+            </div>
+
+            <!-- Nhóm 4 cúp Champions League -->
+            <div class="hotspot" style="top: 38%; left: 16%; width: 5%; height: 22%;" 
+                 data-title="UEFA Champions League (2006)" data-img="2006.jpg" data-desc="Lionel Messi was part of the Barcelona squad that won the UEFA Champions League in the 2005–2006 season, but he did not play in the final due to injury.">
+                <!-- Lionel Messi có mặt trong đội hình Barcelona vô địch UEFA Champions League (Cúp C1) mùa giải 2005–2006, nhưng anh không ra sân ở trận chung kết do chấn thương. -->
+            </div>
+            <div class="hotspot" style="top: 30%; left: 21%; width: 7%; height: 28%;" 
+                 data-title="UEFA Champions League (2009)" data-img="2009.webp" data-desc="Defeated Manchester United in Rome, completing a historic sextuple.">
+                <!-- Đánh bại Manchester United tại Rome, hoàn tất cú ăn 6 lịch sử. -->
+            </div>
+            <div class="hotspot" style="top: 45%; left: 21%; width: 6%; height: 18%;" 
+                 data-title="UEFA Champions League (2011)" data-img="2011.jpg" data-desc="The greatest performance in the history of Champions League finals at Wembley.">
+                 <!-- Màn trình diễn đỉnh cao nhất lịch sử các trận chung kết C1 tại Wembley. -->
+            </div>
+            <div class="hotspot" style="top: 38%; left: 29%; width: 6%; height: 22%;" 
+                 data-title="UEFA Champions League (2015)" data-img="mns.jpg" data-desc="Winning the title with the MSN trio that devastated Europe.">
+                 <!-- Vô địch cùng tam tấu MSN hủy diệt châu Âu -->
+            </div>
+
+            <!-- Trọn bộ 8 Quả Bóng Vàng -->
+            <div class="hotspot" style="top: 55%; left: 11%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2009)" data-img="2009bl.webp" data-desc="The first Ballon d'Or of his career at the age of 22.">
+            </div>
+            <div class="hotspot" style="top: 55%; left: 21%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2010)" data-img="2010.jpg" data-desc="A second consecutive Ballon d'Or, beating out Xavi and Iniesta.">
+            </div>
+            <div class="hotspot" style="top: 55%; left: 31%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2011)" data-img="2011.webp" data-desc="A third Ballon d'Or, equalling the record held by legends.">
+            </div>
+            <div class="hotspot" style="top: 55%; left: 41.5%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2012)" data-img="2012.jpg" data-desc="Fourth consecutive Ballon d'Or – an unprecedented record (91 goals in a year).">
+            </div>
+            <div class="hotspot" style="top: 55%; left: 53.5%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2015)" data-img="2015bl.jpg" data-desc="A fifth Ballon d'Or, marking a return to the pinnacle alongside a treble.">
+                 <!-- Quả Bóng Vàng thứ 5, đánh dấu sự trở lại đỉnh cao cùng cú ăn 3. -->
+            </div>
+            <div class="hotspot" style="top: 55%; left: 64.5%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2019)" data-img="2019.jpg" data-desc="A sixth Ballon d'Or—officially claiming the all-time record outright.">
+                 <!-- Quả Bóng Vàng thứ 6, chính thức vươn lên độc chiếm kỷ lục lịch sử. -->
+            </div>
+            <div class="hotspot" style="top: 55%; left: 75%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2021)" data-img="2021.webp" data-desc="A seventh Ballon d'Or, silencing all doubts following the Copa América triumph.">
+                 <!-- Quả Bóng Vàng thứ 7, đập tan mọi nghi ngờ sau chức vô địch Copa America. -->
+            </div>
+            <div class="hotspot" style="top: 55%; left: 86%; width: 8%; height: 25%;" 
+                 data-title="Ballon d'Or (2023)" data-img="2023.jpg" data-desc="An eighth Ballon d'Or—the perfect conclusion to a magical journey in Qatar.">
+                 <!-- Quả Bóng Vàng thứ 8, cái kết viên mãn sau hành trình kỳ diệu tại Qatar -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal cho Tủ Danh Hiệu -->
+    <div class="inspect-modal" id="inspectModal">
+        <div class="inspect-content">
+            <span class="close-inspect" id="closeInspect">&times;</span>
+            <div class="inspect-img-box">
+                <img id="inspectImg" src="" alt="Trophy Detail">
+            </div>
+            <div class="inspect-text-box">
+                <h2 id="inspectTitle">Title</h2>
+                <p id="inspectDesc">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="glitch-text">M10 LEGACY</h2>
+            <p class="quote">"I prefer to win titles with the team ahead of individual awards or scoring more goals than anyone else."</p>
+            <p class="author">- Lionel Andrés Messi -</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Messi's Legacy. Crafted for the GOAT.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Xử lý Toàn bộ web -->
     <script>
-        // Tạo một "người quan sát" (Observer)
+        // 1. Scroll Reveal cho Timeline
         const timelineObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // Khi phần tử lọt vào tầm nhìn của màn hình
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('show'); // Gắn class show để bay vào
+                    entry.target.classList.add('show');
                 } 
-                /* Bỏ comment 3 dòng dưới nếu bạn muốn cuộn qua rồi cuộn lại nó vẫn bay vào tiếp */
-                // else {
-                //     entry.target.classList.remove('show'); 
-                // }
             });
-        }, {
-            threshold: 0.3 // Kích hoạt khi 30% hộp thời gian đã xuất hiện trên màn hình
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.timeline-container').forEach(timeline => {
+            timelineObserver.observe(timeline);
         });
 
-        // Tìm tất cả các container của timeline và bắt đầu quan sát
-        const timelines = document.querySelectorAll('.timeline-container');
-        timelines.forEach(timeline => {
-            timelineObserver.observe(timeline);
+        // 2. Hamburger Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            sidebar.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('open');
+                sidebar.classList.remove('open');
+            });
+        });
+
+        // 3. Iconic Moments Video Modal
+        const videoModal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+
+        document.querySelectorAll('.moment-card').forEach(card => {
+            card.addEventListener('click', () => {
+                modalVideo.src = card.getAttribute('data-video');
+                modalTitle.innerText = card.getAttribute('data-title');
+                modalDesc.innerText = card.getAttribute('data-desc');
+                videoModal.classList.add('active');
+            });
+        });
+
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            setTimeout(() => { modalVideo.src = ""; }, 400);
+        }
+
+        document.getElementById('closeModal').addEventListener('click', closeVideoModal);
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) closeVideoModal();
+        });
+
+        // 4. Trophy Room Hotspot Modal
+        const inspectModal = document.getElementById('inspectModal');
+        const inspectImg = document.getElementById('inspectImg');
+        const inspectTitle = document.getElementById('inspectTitle');
+        const inspectDesc = document.getElementById('inspectDesc');
+
+        document.querySelectorAll('.hotspot').forEach(spot => {
+            spot.addEventListener('click', () => {
+                inspectTitle.innerText = spot.getAttribute('data-title');
+                inspectImg.src = spot.getAttribute('data-img');
+                inspectDesc.innerText = spot.getAttribute('data-desc');
+                inspectModal.classList.add('active');
+            });
+        });
+
+        function closeInspectModal() {
+            inspectModal.classList.remove('active');
+        }
+
+        document.getElementById('closeInspect').addEventListener('click', closeInspectModal);
+        inspectModal.addEventListener('click', (e) => {
+            if (e.target === inspectModal) closeInspectModal();
+        });
+        // 5. Hiệu ứng chạy số cho Bộ đếm thành tích
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Tốc độ chạy (càng nhỏ càng nhanh)
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText;
+                        
+                        // Tính bước nhảy
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(updateCount, 20); // Delay mỗi bước nhảy (20ms)
+                        } else {
+                            // Đảm bảo số cuối cùng chính xác
+                            counter.innerText = target + (target > 100 ? "+" : ""); 
+                        }
+                    };
+                    
+                    updateCount();
+                    // Ngừng quan sát sau khi chạy xong để không lặp lại mỗi lần cuộn
+                    observer.unobserve(counter); 
+                }
+            });
+        }, { threshold: 0.5 }); // Kích hoạt khi khu vực này hiện lên 50% màn hình
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
         });
     </script>
 </body>
