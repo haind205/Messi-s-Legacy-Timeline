@@ -657,54 +657,98 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- TỐI ƯU GIAO DIỆN MOBILE --- */
+/* --- TỐI ƯU TOÀN DIỆN CHO MOBILE (MAX-WIDTH: 768PX) --- */
 @media (max-width: 768px) {
-    /* ... (giữ nguyên phần CSS mobile của stats-counter nếu bạn đã thêm) ... */
-
-    /* 1. Biến Tủ đồ thành dạng vuốt ngang (Horizontal Scroll) */
-    .carousel-wrapper {
-        padding: 50px 0; /* Giảm khoảng cách thừa trên mobile */
+    /* 1. Sửa lỗi Hero Banner bị to quá cỡ */
+    .hero-content h1 {
+        font-size: 3rem; /* Thu nhỏ chữ tiêu đề */
+        letter-spacing: 3px;
+    }
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 15px; /* Thêm lề hai bên để chữ không sát mép */
     }
 
+    /* 2. Tủ đồ (Career Locker Room) - Vuốt ngang hoàn hảo */
+    .carousel-wrapper {
+        padding: 30px 0;
+    }
     .cards-track {
         display: flex;
-        flex-wrap: nowrap; /* Bắt buộc không rớt dòng */
-        overflow-x: auto; /* Cho phép cuộn ngang */
-        scroll-snap-type: x mandatory; /* Bắt dính vị trí khi vuốt */
-        -webkit-overflow-scrolling: touch; /* Cuộn mượt trên iOS */
-        gap: 20px;
-        padding: 20px; /* Tạo khoảng trống ở 2 đầu */
-        /* Giấu thanh cuộn ngang để trông đẹp hơn (tùy chọn) */
-        scrollbar-width: none; 
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+        padding: 10px 20px;
+        scrollbar-width: none; /* Giấu thanh cuộn */
     }
-    
     .cards-track::-webkit-scrollbar {
-        display: none; /* Giấu thanh cuộn ngang trên Chrome/Safari */
+        display: none;
     }
-
     .jersey-card {
-        scroll-snap-align: center; /* Khi vuốt, thẻ áo sẽ luôn dừng ở giữa màn hình */
-        width: 260px; /* Giữ kích thước thẻ ổn định trên mobile */
-        opacity: 0.8; /* Tăng opacity cơ bản trên mobile để dễ nhìn */
-        transform: scale(0.95); /* Thu nhỏ nhẹ */
+        scroll-snap-align: center;
+        width: 80vw; /* Chiếm 80% chiều rộng màn hình điện thoại */
+        max-width: 280px;
+        height: 350px;
+        opacity: 0.9; /* Sáng hơn so với trên máy tính */
+        transform: scale(1);
     }
-
     .jersey-card:hover, .jersey-card.active {
+        transform: scale(1.02); /* Bỏ hiệu ứng nhảy múa quá mạnh trên mobile */
+    }
+
+    /* 3. Sửa Timeline bị lệch */
+    .timeline::after {
+        left: 31px; /* Đẩy vạch vàng sang sát mép trái */
+    }
+    .timeline-container {
+        width: 100%; /* Chiếm toàn bộ chiều ngang */
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-container::after {
+        left: 15px; /* Dịch viên bi vàng sang trái */
+    }
+    .left-container, .right-container {
+        left: 0; /* Xóa căn giữa của máy tính */
+    }
+    /* Xóa hiệu ứng trượt từ 2 bên, đổi thành trượt từ dưới lên */
+    .left-container .timeline-box, .right-container .timeline-box {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    .timeline-container.show .timeline-box {
+        transform: translateY(0);
         opacity: 1;
-        transform: scale(1.05) translateY(-5px); /* Hiệu ứng nổi bật nhẹ hơn trên mobile để tránh vỡ khung */
+    }
+
+    /* 4. Khoảnh khắc & Video Modal */
+    .moments-grid {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột duy nhất */
+        gap: 20px;
+    }
+    .modal-content {
+        width: 95%; /* Mở rộng cửa sổ xem video tối đa */
+        margin-top: 50px;
+    }
+    .modal-text {
+        padding: 15px;
+    }
+    .modal-text h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 5. Bộ đếm thành tích */
+    .stats-counter {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 10px;
+    }
+    .stat-item {
+        width: 45%; /* Chia 2 cột vuông vắn */
+    }
+    .stat-item h3 {
+        font-size: 2.5rem;
     }
 }
-
-/* --- FOOTER --- */
-.footer {
-    background: linear-gradient(to top, #050a15, transparent);
-    padding: 80px 20px 40px;
-    text-align: center;
-    border-top: 1px solid rgba(234, 179, 8, 0.2);
-    margin-top: 50px;
-}
-.footer-content { max-width: 800px; margin: 0 auto; }
-.footer .glitch-text { font-size: 2.5rem; color: #eab308; margin-bottom: 20px; }
-.footer .quote { font-style: italic; color: #cbd5e1; font-size: 1.2rem; line-height: 1.8; margin-bottom: 10px; }
-.footer .author { color: #eab308; font-weight: bold; letter-spacing: 2px; margin-bottom: 40px; }
-.footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; color: #64748b; font-size: 0.9rem; }
