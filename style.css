@@ -657,98 +657,85 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- TỐI ƯU TOÀN DIỆN CHO MOBILE (MAX-WIDTH: 768PX) --- */
-@media (max-width: 768px) {
-    /* 1. Sửa lỗi Hero Banner bị to quá cỡ */
+/* --- CHỐNG TRÀN VIỀN VÀ TỐI ƯU ĐA MÀN HÌNH --- */
+/* Khóa chết cuộn ngang của toàn bộ trang web */
+html, body {
+    overflow-x: hidden !important; 
+    width: 100%;
+    max-width: 100vw;
+}
+
+/* Áp dụng cho cả điện thoại (dọc/ngang) và máy tính bảng */
+@media (max-width: 992px) {
+    /* 1. Hero Banner: Chữ tự động co giãn theo tỷ lệ màn hình */
     .hero-content h1 {
-        font-size: 3rem; /* Thu nhỏ chữ tiêu đề */
-        letter-spacing: 3px;
+        font-size: clamp(2rem, 8vw, 4.5rem) !important;
+        letter-spacing: 3px !important;
     }
     .hero-content p {
-        font-size: 1rem;
-        padding: 0 15px; /* Thêm lề hai bên để chữ không sát mép */
+        font-size: 0.9rem;
+        padding: 0 15px;
     }
 
-    /* 2. Tủ đồ (Career Locker Room) - Vuốt ngang hoàn hảo */
-    .carousel-wrapper {
-        padding: 30px 0;
-    }
-    .cards-track {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 15px;
-        padding: 10px 20px;
-        scrollbar-width: none; /* Giấu thanh cuộn */
-    }
-    .cards-track::-webkit-scrollbar {
-        display: none;
-    }
-    .jersey-card {
-        scroll-snap-align: center;
-        width: 80vw; /* Chiếm 80% chiều rộng màn hình điện thoại */
-        max-width: 280px;
-        height: 350px;
-        opacity: 0.9; /* Sáng hơn so với trên máy tính */
-        transform: scale(1);
-    }
-    .jersey-card:hover, .jersey-card.active {
-        transform: scale(1.02); /* Bỏ hiệu ứng nhảy múa quá mạnh trên mobile */
+    /* 2. Menu Sidebar: Thu gọn lại để không chiếm hết màn hình ngang */
+    .sidebar {
+        width: 250px;
     }
 
-    /* 3. Sửa Timeline bị lệch */
-    .timeline::after {
-        left: 31px; /* Đẩy vạch vàng sang sát mép trái */
-    }
-    .timeline-container {
-        width: 100%; /* Chiếm toàn bộ chiều ngang */
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    .timeline-container::after {
-        left: 15px; /* Dịch viên bi vàng sang trái */
-    }
-    .left-container, .right-container {
-        left: 0; /* Xóa căn giữa của máy tính */
-    }
-    /* Xóa hiệu ứng trượt từ 2 bên, đổi thành trượt từ dưới lên */
-    .left-container .timeline-box, .right-container .timeline-box {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    .timeline-container.show .timeline-box {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    /* 4. Khoảnh khắc & Video Modal */
-    .moments-grid {
-        grid-template-columns: 1fr; /* Hiển thị 1 cột duy nhất */
-        gap: 20px;
-    }
-    .modal-content {
-        width: 95%; /* Mở rộng cửa sổ xem video tối đa */
-        margin-top: 50px;
-    }
-    .modal-text {
-        padding: 15px;
-    }
-    .modal-text h2 {
-        font-size: 1.5rem;
-    }
-
-    /* 5. Bộ đếm thành tích */
+    /* 3. Bộ đếm thành tích: Ép vào lưới 2 cột vuông vức */
     .stats-counter {
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 40px 10px;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 30px 10px;
     }
     .stat-item {
-        width: 45%; /* Chia 2 cột vuông vắn */
+        width: 100%;
     }
     .stat-item h3 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+    .stat-item p {
+        font-size: 0.85rem;
+    }
+
+    /* 4. Timeline: Thu gọn lề chống lẹm chữ bên phải */
+    .timeline::after {
+        left: 20px; 
+    }
+    .timeline-container {
+        width: 100%; 
+        padding-left: 45px;
+        padding-right: 5px; 
+    }
+    .timeline-container::after {
+        left: 10px; 
+    }
+    .left-container, .right-container {
+        left: 0; 
+    }
+    .timeline-box {
+        padding: 20px 15px;
+    }
+    .timeline-box h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* 5. Khoảnh khắc & Locker Room */
+    .carousel-wrapper {
+        padding: 20px 0;
+    }
+    .jersey-card {
+        width: 240px; /* Thu nhỏ thẻ áo đấu */
+        height: 320px;
+    }
+    .moments-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .modal-content {
+        width: 95%;
+        margin-top: 30px;
     }
 }
